@@ -1,11 +1,13 @@
 services:
-  web-dev:
+  web:
     build:
       context: .
-      dockerfile: Dockerfile # Menggunakan Node.js
+      target: development
     ports:
       - "5173:5173"
     volumes:
       - .:/app
       - /app/node_modules
-    command: npm run dev -- --host 0.0.0.0
+    environment:
+      - NODE_ENV=development
+    restart: always
