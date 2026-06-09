@@ -98,6 +98,21 @@ const App = () => {
         '5-7 Hari Jadi'
       ],
       highlight: false
+    },
+    {
+      id: 'custom',
+      name: 'Paket CUSTOM',
+      price: 'Mulai 3jt',
+      desc: 'Solusi lengkap buat bisnis skala besar.',
+      features: [
+        'Custom Desain Suka-suka',
+        'Fitur Apapun Bisa Dibuat',
+        'Integrasi API Pihak Ketiga',
+        'Optimasi SEO Pro',
+        'Support Prioritas 24/7',
+        'Waktu Pengerjaan Fleksibel'
+      ],
+      highlight: false
     }
   ];
 
@@ -250,7 +265,7 @@ const App = () => {
               <p className="text-slate-500 dark:text-slate-400 font-medium">Harga jujur, pengerjaan cepat, hasil memuaskan.</p>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {packages.map((pkg) => (
                 <div
                   key={pkg.id}
@@ -356,6 +371,7 @@ const App = () => {
                       <option value="kilat">Paket KILAT (850rb)</option>
                       <option value="usaha">Paket USAHA (1.45jt)</option>
                       <option value="sistem">Paket SISTEM (1.99jt)</option>
+                      <option value="custom">Paket CUSTOM (Mulai 3jt)</option>
                       <option value="tanya">Tanya-tanya Dulu</option>
                     </select>
                   </div>
