@@ -1,0 +1,14 @@
+services:
+  web:
+    build:
+      context: .
+      target: production
+    ports:
+      - "5411:80"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=production
+    restart: always
+    
