@@ -1,14 +1,11 @@
 services:
-  web:
+  web-dev:
     build:
       context: .
-      target: production
+      dockerfile: Dockerfile # Menggunakan Node.js
     ports:
-      - "5411:80"
+      - "5173:5173"
     volumes:
       - .:/app
       - /app/node_modules
-    environment:
-      - NODE_ENV=production
-    restart: always
-    
+    command: npm run dev -- --host 0.0.0.0
